@@ -4,8 +4,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("dnn_groupdocs_viewer_java")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("GroupDocsDnnViewerForJava")]
+[assembly: AssemblyDescription("A DotNetNuke GroupDocs Viewer for Java")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("dnn_groupdocs_viewer_java")]
@@ -30,5 +30,5 @@ using System.Runtime.InteropServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("00.00.01.*")]
-[assembly: AssemblyFileVersion("00.00.01.*")]
+[assembly: AssemblyVersion("01.00.00.*")]
+[assembly: AssemblyFileVersion("01.00.00.*")]

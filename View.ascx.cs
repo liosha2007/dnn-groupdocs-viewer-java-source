@@ -34,11 +34,42 @@ namespace Christoc.Modules.dnn_groupdocs_viewer_java
     /// -----------------------------------------------------------------------------
     public partial class View : dnn_groupdocs_viewer_javaModuleBase, IActionable
     {
+
+        override protected void OnInit(EventArgs e)
+        {
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        private void InitializeComponent()
+        {
+            this.Load += new System.EventHandler(this.Page_Load);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-
+                if (Settings.Contains("Url"))
+                {
+                    Url.Value = String.Format("{0}", Settings["Url"]);
+                }
+                if (Settings.Contains("Width"))
+                {
+                    Width.Value = String.Format("{0}", Settings["Width"]);
+                }
+                if (Settings.Contains("Height"))
+                {
+                    Height.Value = String.Format("{0}", Settings["Height"]);
+                }
+                if (Settings.Contains("DefaultFileName"))
+                {
+                    DefaultFileName.Value = String.Format("{0}", Settings["DefaultFileName"]);
+                }
+                if (Settings.Contains("UseHttpHandlers"))
+                {
+                    UseHttpHandlers.Value = String.Format("{0}", Settings["UseHttpHandlers"]);
+                }
             }
             catch (Exception exc) //Module failed to load
             {

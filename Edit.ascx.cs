@@ -13,6 +13,8 @@
 
 using System;
 using DotNetNuke.Services.Exceptions;
+using DotNetNuke.Common;
+using DotNetNuke.Entities.Modules;
 
 namespace Christoc.Modules.dnn_groupdocs_viewer_java
 {
@@ -30,16 +32,63 @@ namespace Christoc.Modules.dnn_groupdocs_viewer_java
     /// -----------------------------------------------------------------------------
     public partial class Edit : dnn_groupdocs_viewer_javaModuleBase
     {
+
+        override protected void OnInit(EventArgs e)
+        {
+            InitializeComponent();
+            base.OnInit(e);
+        }
+
+        private void InitializeComponent()
+        {
+            this.Load += new System.EventHandler(this.Page_Load);
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
+                if (!IsPostBack)
+                {
+                    var dc = new ModuleController();
+                    var module = dc.GetModule(ModuleId);
 
+                    if (module != null)
+                    {
+                        Title.Text = module.ModuleTitle;
+                        txtDescription.Text = module.DesktopModule.Description;
+                    }
+                    else
+                        Response.Redirect(Globals.NavigateURL(), true);
+                }
             }
             catch (Exception exc) //Module failed to load
             {
                 Exceptions.ProcessModuleLoadException(this, exc);
             }
+        }
+
+        protected void cmdUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var controller = new ModuleController();
+                var module = controller.GetModule(ModuleId);
+
+                module.ModuleTitle = Title.Text;
+                module.DesktopModule.Description = txtDescription.Text;
+
+                controller.UpdateModule(module);
+                Response.Redirect(Globals.NavigateURL(), true);
+            }
+            catch (Exception exc)
+            {
+                Exceptions.ProcessModuleLoadException(this, exc);
+            }
+        }
+        protected void cmdCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect(Globals.NavigateURL(), true);
         }
     }
 }

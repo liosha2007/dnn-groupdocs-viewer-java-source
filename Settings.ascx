@@ -1,23 +1,27 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Settings.ascx.cs" Inherits="Christoc.Modules.dnn_groupdocs_viewer_java.Settings" %>
-
-
-<!-- uncomment the code below to start using the DNN Form pattern to create and update settings -->
-<%--  
-
 <%@ Register TagName="label" TagPrefix="dnn" Src="~/controls/labelcontrol.ascx" %>
 
-	<h2 id="dnnSitePanel-BasicSettings" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("BasicSettings")%></a></h2>
-	<fieldset>
-        <div class="dnnFormItem">
-            <dnn:Label ID="lblSetting1" runat="server" /> 
- 
-            <asp:TextBox ID="txtSetting1" runat="server" />
-        </div>
-        <div class="dnnFormItem">
-            <dnn:label ID="lblSetting2" runat="server" />
-            <asp:TextBox ID="txtSetting2" runat="server" />
-        </div>
-    </fieldset>
 
-
---%>
+<h2 id="dnnSitePanel-BasicSettings" class="dnnFormSectionHead"><a href="" class="dnnSectionExpanded"><%=LocalizeString("BasicSettings")%></a></h2>
+<fieldset>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblUrl" Text="Server Url" runat="server" /> 
+        <asp:TextBox ID="txtUrl" runat="server" />
+    </div>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblWidth" Text="Width" runat="server" /> 
+        <asp:TextBox ID="txtWidth" runat="server" Text="800px" />
+    </div>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblHeight" Text="Height" runat="server" /> 
+        <asp:TextBox ID="txtHeight" runat="server" Text="600px" />
+    </div>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblDefaultFileName" Text="Default file name" runat="server" /> 
+        <asp:TextBox ID="txtDefaultFileName" runat="server" />
+    </div>
+    <div class="dnnFormItem">
+        <dnn:Label ID="lblUseHttpHandlers" Text="Use Http Handlers" runat="server" />
+        <asp:CheckBox runat="server" ID="ckbUseHttpHandlers" />
+    </div>
+</fieldset>

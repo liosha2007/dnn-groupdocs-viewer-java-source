@@ -51,18 +51,26 @@ namespace Christoc.Modules.dnn_groupdocs_viewer_java
             {
                 if (Page.IsPostBack == false)
                 {
-                    //Check for existing settings and use those on this page
-                    //Settings["SettingName"]
-
-                    /* uncomment to load saved settings in the text boxes
-                    if(Settings.Contains("Setting1"))
-                        txtSetting1.Text = Settings["Setting1"].ToString();
-			
-                    if (Settings.Contains("Setting2"))
-                        txtSetting2.Text = Settings["Setting2"].ToString();
-
-                    */
-
+                    if (Settings.Contains("Url"))
+                    {
+                        txtUrl.Text = Settings["Url"].ToString();
+                    }
+                    if (Settings.Contains("Width"))
+                    {
+                        txtWidth.Text = Settings["Width"].ToString();
+                    }
+                    if (Settings.Contains("Height"))
+                    {
+                        txtHeight.Text = Settings["Height"].ToString();
+                    }
+                    if (Settings.Contains("DefaultFileName"))
+                    {
+                        txtDefaultFileName.Text = Settings["DefaultFileName"].ToString();
+                    }
+                    if (Settings.Contains("UseHttpHandlers"))
+                    {
+                        ckbUseHttpHandlers.Checked = Boolean.Parse(Settings["UseHttpHandlers"].ToString());
+                    }
                 }
             }
             catch (Exception exc) //Module failed to load
@@ -80,16 +88,15 @@ namespace Christoc.Modules.dnn_groupdocs_viewer_java
         {
             try
             {
-                var modules = new ModuleController();
+                ModuleController modules = new ModuleController();
 
                 //the following are two sample Module Settings, using the text boxes that are commented out in the ASCX file.
                 //module settings
-                //modules.UpdateModuleSetting(ModuleId, "Setting1", txtSetting1.Text);
-                //modules.UpdateModuleSetting(ModuleId, "Setting2", txtSetting2.Text);
-
-                //tab module settings
-                //modules.UpdateTabModuleSetting(TabModuleId, "Setting1",  txtSetting1.Text);
-                //modules.UpdateTabModuleSetting(TabModuleId, "Setting2",  txtSetting2.Text);
+                modules.UpdateModuleSetting(ModuleId, "Url", txtUrl.Text);
+                modules.UpdateModuleSetting(ModuleId, "Width", txtWidth.Text);
+                modules.UpdateModuleSetting(ModuleId, "Height", txtHeight.Text);
+                modules.UpdateModuleSetting(ModuleId, "DefaultFileName", txtDefaultFileName.Text);
+                modules.UpdateModuleSetting(ModuleId, "UseHttpHandlers", ckbUseHttpHandlers.Checked.ToString().ToLower());
             }
             catch (Exception exc) //Module failed to load
             {

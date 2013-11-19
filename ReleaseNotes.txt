@@ -1,17 +1,17 @@
-﻿<h3>dnn_groupdocs_viewer_java</h3>
+﻿<h3>GroupDocs Viewer for Java</h3>
 <p class="Contributor">
-	Christoc.com <br />
-	<a href="mailto:modules@christoc.com">modules@christoc.com</a><br />
-	<a href=http://www.christoc.com>http://www.christoc.com</a><br />
+	GroupDocs.com <br />
+	<a href="mailto:support@groupdocs.com">support@groupdocs.com</a><br />
+	<a href=http://www.groupdocs.com>http://www.groupdocs.com</a><br />
 </p>
 <hr/>
 <div class="License">
-	<h3>About the dnn_groupdocs_viewer_java</h3>
+	<h3>About the GroupDocs Java Viewer</h3>
 	<p class="Owner">
-		<b>Version CHANGEME</b><br /><br />
+		GroupDocs Viewer for Java<br />
 	</p>
-	<p>Description about version.</p>
-	
+	<p>First version of module</p>
+<!--	
 	<h4>Bug Fixes</h4>
 	<ul>
 			<li>List</li>
@@ -19,5 +19,5 @@
 			<li>bug</li>
 			<li>fixes</li>
 	</ul>
-	
+	-->
 </div>

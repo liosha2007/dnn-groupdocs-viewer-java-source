@@ -1,14 +1,14 @@
 <dotnetnuke type="Package" version="5.0">
   <packages>
-    <package name="dnn_groupdocs_viewer_java" type="Module" version="00.00.01">
-      <friendlyName>dnn_groupdocs_viewer_java</friendlyName>
-      <description>Christoc.com dnn_groupdocs_viewer_java module</description>
-      <iconFile>Images/icon_extensions.gif</iconFile>
+    <package name="GroupDocsViewerForJava" type="Module" version="01.00.00">
+      <friendlyName>GroupDocs Viewer for Java</friendlyName>
+      <description>A DotNetNuke GroupDocs Viewer for Java</description>
+      <iconFile>~/DesktopModules/dnn_groupdocs_viewer_java/Images/icon_extensions.png</iconFile>
       <owner>
-        <name>Christoc.com</name>
-        <organization>Christoc.com</organization>
-        <url>http://www.christoc.com</url>
-        <email>modules@christoc.com</email>
+        <name>GroupDocs</name>
+        <organization>GroupDocs.com</organization>
+        <url>http://www.groupdocs.com</url>
+        <email>support@groupdocs.com</email>
       </owner>
       <license src="License.txt"></license>
       <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
@@ -92,7 +92,7 @@
         <component type="Assembly">
           <assemblies>
             <assembly>
-              <name>dnn_groupdocs_viewer_java.dll</name>
+              <name>dnn-groupdocs-viewer-java.dll</name>
               <path>bin</path>
             </assembly>
           </assemblies>
