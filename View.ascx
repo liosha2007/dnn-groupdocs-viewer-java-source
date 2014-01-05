@@ -22,10 +22,10 @@
 </script>
 <script type="text/javascript" src="<%= Url.Value %>/assets/js/installableViewer.min.js"></script>
 <script type="text/javascript">
-    $.fn.groupdocsViewer.prototype.applicationPath = '<%= Url.Value %>/';
+    $.ui.groupdocsViewer.prototype.applicationPath = '<%= Url.Value %>/';
 </script>
 <script type="text/javascript">
-    $.fn.groupdocsViewer.prototype.useHttpHandlers = <%= UseHttpHandlers.Value.ToString().ToLower() %>;
+    $.ui.groupdocsViewer.prototype.useHttpHandlers = <%= UseHttpHandlers.Value.ToString().ToLower() %>;
 </script>
 <script type="text/javascript" src="<%= Url.Value %>/assets/js/GroupdocsViewer.all.min.js"></script>
 
